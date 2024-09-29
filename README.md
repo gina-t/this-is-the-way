@@ -8,7 +8,7 @@ As a user I want to search the Cookwise website for recipes selected by specific
 
 Given a user input for a specific ingredient and a specific dietary requirement for eg. low glycaemic index, vegetarian, vegan, gluten free, dairy free,
 
-When I search the Cookwise website,
+When I search the This is the Way website,
 
 Then I expect a list of recipes containing that ingredient and meeting my dietary requirement.
 
