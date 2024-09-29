@@ -1,0 +1,15 @@
+{
+  "name": "this-is-the-way",
+  "version": "1.0.0",
+  "description": "## Website integrated with Recipe Search API and Cloud Translation API",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./public/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  }
+}
