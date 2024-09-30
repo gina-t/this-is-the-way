@@ -1,43 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>This Is The Way</title>
-    <link rel="stylesheet" href="style.css">  
-    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
-
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css"/>
   </head>
 
-  <body class="bg-amber-50">
-    <div class="min-h-screen px-6 py-3">
-        <header class="flex justify-between">
-          <div>
-            <img src="assets/greenapple.png" class="h-20" class="w-20" alt="green-apple">  
-          </div>
-          <div>
-            <img src="assets/health-linear.png" class="h-20 w-20" alt="health-linear">
-          </div>
-        </header>
-        <main>
-          <div>
-            <h1 class="text-center font-semibold">This is the way to a healthier life</h1>
-            <p class="text-center">Make the right choices with our recipe finder in your preferred language.</p>
-          </div>
-          <div class="rotate-90" class="h-60" class="w-60" class="rounded-xl">
-            <img src="assets/veges.jpg" alt="salad">
-          </div>
-          <div class="flex">
-            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-              <a href="script.js">Find a recipe</a>
-            </button>
-          </div>
+  <body>
+    <div class="w-full
+            h-screen
+            max-h-[32rem]
+            p-24
+            relative
+            overflow-hidden
+            block
+            z-10
+						
+            bg-hero-pattern
+            bg-cover
+            bg-no-repeat
+            bg-center
 
-        </main>
-        <footer>
-
-        </footer>
-    </div> 
-  </body>
+            before:content-['']
+            before:absolute
+            before:inset-0
+            before:block
+            before:bg-gradient-to-r
+            before:from-gray-300
+            before:to-gray-500
+            before:opacity-50
+            before:z-[-5]
+			">
+	    <h1 class="text-yellow-200 text-4xl text-center font-sans">This is the way to better health.</h1>
     
+      <div>
+        <label for="recipe-finder" class="block text-sm font-medium leading-6 text-gray-900">Recipe finder</label>
+        <div class="mt-2">
+          <input type="text" name="recipe-finder" id="recipe-finder" class="block w-10 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+        </div>
+      </div>
+    </div>
+    <!-- card-1 -->
+    <div class="divide-y divide-gray-600 overflow-hidden rounded-lg bg-gray-600 shadow">
+      <div class="px-4 py-5 sm:px-6">
+        <h1 class="text-xl font-bold text-gray-800">Ultra-processed foods</h1>
+      </div>
+      <div class="px-4 py-5 sm:p-6">
+        <p>NOVA classifies foods according to the extent and purpose of industrial processing. Ultra-processed foods undergo fractionation of whole foods (typically mono-sourced from corn, wheat, soya and cane, and remnants of intensive live-stock farming) into subtances such as fructose, lactose, modified oils, hydrolysed proteins, soya protein isolate, gluten and whey protein. These substances are subsequently submitted to a series of industrial processing techniques such as hydrolysis and hydrogenation, followed by reassembly using extrusion and moulding, and lastly addition of colours, flavour enhancers and emulsifiers. These industrial processes result in hyper-palatable products with high calorific and low nutritional value, and combined with sophisticated packaging to attract and obfuscate consumers, are contributing to an obesity epidemic and associated morbidities such as type 2 diabetes mellitus.</p>
+        <a href="https://www.cambridge.org/core/journals/public-health-nutrition/article/ultraprocessed-foods-what-they-are-and-how-to-identify-them/E6D744D714B1FF09D5BCA3E74D53A185"><span class="text-blue-600">Learn more about ultra-process foods here.</span></a>
+      </div>
+    </div>
+    <!-- card-2 -->
+    <div class="divide-y divide-gray-600 overflow-hidden rounded-lg bg-gray-600 shadow">
+      <div class="px-4 py-5 sm:px-6">
+        <h1 class="text-xl font-bold text-gray-800">Regular exercise</h1>
+      </div>
+      <div class="px-4 py-5 sm:p-6">
+        <p>Regular moderate intensity exercise decreases the risk of cardiovascular disease, type 2 diabetes mellitus and stroke. The biology of exercise is complex and involves adaptive responses in multiple organ systems. Specifically, regualr exrecise maintains local homeostatsis, protects the integrity of the blood-brain barrier, promotes repair and regeneration of tissues, enhances circadian rhythms, and supports anti-inflammatory regulation.</p>
+        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9923435/#:~:text=Exercise%20impacts%20the%20major%20hallmarks,well%20as%20repair%20and%20regeneration."><span class="text-blue-600">Learn more about how exercise sustains the hallmarks of health here.</span></a>
+      </div>
+    </div>
+    
+
+
+  <script src="script.js"></script>
+  </body>
 </html>
+    
