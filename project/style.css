@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Cupidus';
+  font-style: normal;
+  src: url('./assets/Cupidus-Extralight.ttf') format('truetype');
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -154,7 +160,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: Cupidus, Helvetica, sans-serif;
+  font-family: 'Cupidus', Helvetica, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -171,6 +177,7 @@ html,
 
 body {
   margin: 0;
+  font-family: 'Cupidus', Helvetica, sans-serif;
   /* 1 */
   line-height: inherit;
   /* 2 */
@@ -243,7 +250,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: Cupidus, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-feature-settings: normal;
   /* 2 */
