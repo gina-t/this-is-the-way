@@ -6,6 +6,7 @@
     <title>This Is The Way</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <body>
@@ -17,35 +18,39 @@
             overflow-hidden
             block
             z-10
-						
-            bg-hero-pattern
+            bg-[url('./assets/carrots.jpg')]
             bg-cover
             bg-no-repeat
             bg-center
-
             before:content-['']
             before:absolute
             before:inset-0
             before:block
             before:bg-gradient-to-r
-            before:from-gray-300
-            before:to-gray-500
+            before:from-gray-400
+            before:to-gray-600
             before:opacity-50
             before:z-[-5]
 			">
-	    <h1 class="text-yellow-200 text-4xl text-center font-sans">This is the way to better health.</h1>
+	    <h1 class="text-yellow-200 text-7xl text-center">This is the way to better health.</h1>
     
       <div>
-        <label for="recipe-finder" class="block text-sm font-medium leading-6 text-gray-900">Recipe finder</label>
+        <label for="ingredient" class="block text-xl font-bold leading-6 text-gray-800">Enter ingredient</label>
         <div class="mt-2">
-          <input type="text" name="recipe-finder" id="recipe-finder" class="block w-10 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <input type="text" id="ingredient" placeholder="Enter an ingredient" class="block w-100 rounded-md border-0 py-1.5 px-2 text-gray-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-m sm:leading-6">
         </div>
+        <button type="button" id="submit">
+          <div class="mt-2 text-lg">Search</div>
+        </button>
+        <div id="results"><a href="recipe.html"></a></div>
       </div>
     </div>
+  <div class="grid grid-cols-3 gap-4">
+    
     <!-- card-1 -->
-    <div class="divide-y divide-gray-600 overflow-hidden rounded-lg bg-gray-600 shadow">
+    <div class="divide-y divide-yellow-200 overflow-hidden rounded-lg bg-gradient-to-r from-gray-200 to-gray-400 shadow">
       <div class="px-4 py-5 sm:px-6">
-        <h1 class="text-xl font-bold text-gray-800">Ultra-processed foods</h1>
+        <h2 class="text-lg font-bold text-gray-800">Ultra-processed Foods</h2>
       </div>
       <div class="px-4 py-5 sm:p-6">
         <p>NOVA classifies foods according to the extent and purpose of industrial processing. Ultra-processed foods undergo fractionation of whole foods (typically mono-sourced from corn, wheat, soya and cane, and remnants of intensive live-stock farming) into subtances such as fructose, lactose, modified oils, hydrolysed proteins, soya protein isolate, gluten and whey protein. These substances are subsequently submitted to a series of industrial processing techniques such as hydrolysis and hydrogenation, followed by reassembly using extrusion and moulding, and lastly addition of colours, flavour enhancers and emulsifiers. These industrial processes result in hyper-palatable products with high calorific and low nutritional value, and combined with sophisticated packaging to attract and obfuscate consumers, are contributing to an obesity epidemic and associated morbidities such as type 2 diabetes mellitus.</p>
@@ -53,18 +58,36 @@
       </div>
     </div>
     <!-- card-2 -->
-    <div class="divide-y divide-gray-600 overflow-hidden rounded-lg bg-gray-600 shadow">
+    <div class="divide-y divide-yellow-200 overflow-hidden rounded-lg bg-gradient-to-r from-gray-200 to-gray-400 shadow">
       <div class="px-4 py-5 sm:px-6">
-        <h1 class="text-xl font-bold text-gray-800">Regular exercise</h1>
+        <h2 class="text-lg font-bold text-gray-800">Regular Exercise</h2>
       </div>
       <div class="px-4 py-5 sm:p-6">
         <p>Regular moderate intensity exercise decreases the risk of cardiovascular disease, type 2 diabetes mellitus and stroke. The biology of exercise is complex and involves adaptive responses in multiple organ systems. Specifically, regualr exrecise maintains local homeostatsis, protects the integrity of the blood-brain barrier, promotes repair and regeneration of tissues, enhances circadian rhythms, and supports anti-inflammatory regulation.</p>
         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9923435/#:~:text=Exercise%20impacts%20the%20major%20hallmarks,well%20as%20repair%20and%20regeneration."><span class="text-blue-600">Learn more about how exercise sustains the hallmarks of health here.</span></a>
       </div>
     </div>
+    <!-- card-3 -->
+    <div class="divide-y divide-yellow-200 overflow-hidden rounded-lg bg-gradient-to-r from-gray-200 to-gray-400 shadow">
+      <div class="px-4 py-5 sm:px-6">
+        <h2 class="text-lg font-bold text-gray-800">Behavioural Approaches</h2>
+      </div>
+      <div class="px-4 py-5 sm:p-6">
+        <p>
+          Behavioural approaches to nutrition and eating patterns for managing type 2 diabetes:
+          <ul>
+            <li>Personalised counselling strategies and medical nutrition therapy</li>
+            <li>Respectful of cultural, social, economic and environmental factors</li>
+            <li>Motivational interviewing</li>
+            <li>Mindful eating and intuitive eating</li>
+            <li>Empowerment, self-efficacy and collaborative decison making</li>
+            <li>A balanced eating pattern inclusive of meals and snacks, emphasizing fiber-rich plant foods (legumes, nuts, seeds, herbs), a diversity of non-starchy vegetables, nutrient-dense carbohydrate foods (whole grains), fish, and unsaturated vegetable oils.</li>
+          </ul>.
+        </p>
+        <a href="https://www.sciencedirect.com/science/article/pii/S2667036423000043#:~:text=Behavioral%20approaches%20to%20nutritional%20management,over%20time%20with%20ongoing%20education"><span class="text-blue-600">Learn more about behavioural approaches here.</span></a>
+      </div>
+  </div>
     
-
-
   <script src="script.js"></script>
   </body>
 </html>

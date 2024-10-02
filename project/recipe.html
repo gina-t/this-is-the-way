@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Recipe</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div id="loading" class="text-center p-4" style="display: block;"></div>
+    <p class="text-lg">Loading recipe...</p>
+  </div>
+  <div id="recipeContainer" class="divide-y divide-yellow-200 overflow-hidden rounded-lg bg-gradient-to-r from-gray-200 to-gray-400 shadow">
+    <div class="px-4 py-5 sm:px-6">
+      <h2 class="text-m font-bold text-gray-800" id="recipeName">Recipe Name</h2>
+    </div>
+    <div class="px-4 py-5 sm:p-6">
+      <p id="recipeDescription">Recipe Description</p>
+      <img id="recipeImage" src="" alt="">
+    </div>
+    <div id="healthLabels"></div>
+    <div id="ingredients"></div>
+    <a id="instructions" href="" target="_blank">Recipe Instructions</a>
+  </div>
+  
+<script src="recipe.js"></script>
+</body>
+</html>
+
