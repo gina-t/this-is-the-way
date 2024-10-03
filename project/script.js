@@ -38,7 +38,7 @@ submitButton.addEventListener('click', () => {
                             <img src="${image}" alt="${label}">
                         </div>
                         <div class="px-4 py-4 sm:px-6">
-                            <button onclick="getRecipe('${uri}')">View Recipe</button>
+                            <button onclick="viewRecipe('${uri}')">View Recipe</button>
                         </div>`;
             });
             results.innerHTML = recipedetails;
@@ -48,7 +48,9 @@ submitButton.addEventListener('click', () => {
         });       
 });
 
-function getRecipe(id) {
+function viewRecipe(uri) {
+    const id = uri.split("_")[1];
+    console.log(id);
     sessionStorage.setItem("id", id);
     window.location.href = "recipe.html";
 }
