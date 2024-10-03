@@ -1,14 +1,15 @@
-
-const uri = sessionStorage.getItem("id");
+// Initialize the variables
+const id = sessionStorage.getItem("id");
 const appId = sessionStorage.getItem("app_id");
 const appKey = sessionStorage.getItem("app_key");
 const endpoint = sessionStorage.getItem('endpoint');
-const searchURL = `https://api.edamam.com/api/recipes/v2?type=public&q=${ingredient}&app_id=${appId}&app_key=${appKey}`;// 
+
+console.log(id, appId, appKey, endpoint);
+// Initialize the URL
+const searchURL = `https://api.edamam.com/api/recipes/v2/${id}?type=public&app_id=${appId}&app_key=${appKey}`;// 
 const url = new URL(searchURL);
-console.log(uri, appId, appKey, endpoint);
 
 
-let healthLabelButtons = ""; // Initialize healthLabelButtons
 const loadingElement = document.getElementById('loading'); 
 
 fetch(url)
@@ -26,24 +27,10 @@ fetch(url)
   if (data.length > 0) {
     document.getElementById('recipeName').innerHTML = data[0].label;
     document.getElementById('recipeImage').src = data[0].image;
+    document.getElementById('recipeIngredients').innerHTML = data[0].ingredientLines.join("<br>");
+    document.getElementById('recipeInstructions').innerHTML = data[0].url;
 
-    // data[0].healthLabels.forEach(item => {
-    //   healthLabelButtons += `<button type="button" class="btn btn-warning m-2">${item}</button>`;
-    // });
-    // document.getElementById('healthLabels').innerHTML = healthLabelButtons;
-
-    // const ulContainer = document.getElementById('ingredient');
-    // const ulElement = document.createElement("ul");
-    // ulElement.className = "list-group";
-    // ulContainer.appendChild(ulElement);
     
-    // data[0].ingredientLines.forEach(item => {
-    //   const liElement = document.createElement('li');
-    //   liElement.className = "list-group-item";
-    //   liElement.textContent = item;
-    //   ulElement.appendChild(liElement);
-    // });
-    // document.getElementById('instructions').src = data[0].url;
   } else {
     console.error("No recipes found.");
   }
