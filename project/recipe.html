@@ -8,32 +8,66 @@
   <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css"/>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
+  <nav class="bg-gradient-to-r from-gray-200 to-gray-400 shadow">  
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-40 items-center justify-between">
+        <div class="flex flex-1 items-center justify-between sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <img class="h-12 w-auto" src="./assets/apple-brand.svg" alt="">
+            <h1 class="text-3xl text-black py-2">This is the way to better health</h1>
+          
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <a href="index.html" class="rounded-md px-3 py-2 text-m font-bold text-black hover:bg-gray-600 hover:text-white">Return to home page</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2">
+            <a href="index.html" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Return to home page</a>
+          </div>
+        </div>  
+      </div>
+    </div>  
+  </nav>
+  <!-- hero -->
+  <div class="h-24 p-24 relative overflow-hidden block z-10 bg-[url('./assets/carrots.jpg')]
+            bg-cover
+            bg-no-repeat
+            bg-center
+            before:content-['']
+            before:absolute
+            before:inset-0
+            before:block
+            before:bg-gradient-to-r
+            before:from-gray-400
+            before:to-gray-600
+            before:opacity-50
+            before:z-[-5]
+			"></div>
+  <!-- recipe cards -->
   <div id="loading" class="text-center p-4" style="display: block;"></div>
-    <p class="text-lg">Loading recipe...</p>
-  </div>
   <!-- card -->
   <div id="recipeCard" class="divide-y divide-yellow-200 overflow-hidden rounded-lg bg-gradient-to-r from-gray-200 to-gray-400 shadow">
     <div class="px-4 py-5 sm:px-6">
-      <h2 class="text-m font-bold text-gray-800" id="recipeName">Recipe Name</h2>
+      <h2 class="text-lg font-bold text-gray-800" id="recipeName"></h2>
     </div>
     <div class="px-4 py-5 sm:p-6">
-      <img id="recipeImage" src="" alt="Recipe Image">
+      <img id="recipeImage" src="" alt="Recipe Image" class="rounded-lg border-2 border-gray-400 scale-75">
     </div>
     <div class="px-4 py-5 sm:p-6">
-      <h3 class="text-lg font-bold text-gray-800">Recipe Ingredients</h3>
-      <ul id="recipeIngredients" class="text-gray-800">
-        <li>Ingredient 1</li>
-        <li>Ingredient 2</li>
-        <li>Ingredient 3</li>
-      </ul>
+      <h3 class="text-lg font-bold text-gray-800"></h3>
     </div>
-    <div>
-      <button id="recipeInstructions" class="bg-yellow-200 hover:bg-indigo-200 text-black font-bold py-2 px-4 rounded m-4">Recipe Instructions</button>
-    </div>
+    <div class="px-4 py-5 sm:p-6">
+      <h3 class="text-lg font-bold text-gray-800"></h3>
+      <ul id="recipeInstructions" class="text-gray-800"></ul>
   </div>
   
-<script src="recipe.js"></script>
+  <script src="recipe.js"></script>
 </body>
 </html>
 

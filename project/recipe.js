@@ -2,14 +2,11 @@
 const id = sessionStorage.getItem("id");
 const appId = sessionStorage.getItem("app_id");
 const appKey = sessionStorage.getItem("app_key");
-const endpoint = sessionStorage.getItem('endpoint');
-
-console.log(id, appId, appKey, endpoint);
+console.log(id);
 // Initialize the URL
 const searchURL = `https://api.edamam.com/api/recipes/v2/${id}?type=public&app_id=${appId}&app_key=${appKey}`;// 
 const url = new URL(searchURL);
-
-
+console.log(url);
 const loadingElement = document.getElementById('loading'); 
 
 fetch(url)
@@ -24,13 +21,14 @@ fetch(url)
   }
 })
 .then((data) => {
-  if (data.length > 0) {
-    document.getElementById('recipeName').innerHTML = data[0].label;
-    document.getElementById('recipeImage').src = data[0].image;
-    document.getElementById('recipeIngredients').innerHTML = data[0].ingredientLines.join("<br>");
-    document.getElementById('recipeInstructions').innerHTML = data[0].url;
-
-    
+  console.log(data);
+  // Get the recipe object
+  const recipe = data.recipe;
+  // access the recipe object
+  if (recipe) {
+    document.getElementById('recipeName').innerHTML = recipe.label;
+    document.getElementById('recipeImage').src = recipe.image;
+    document.getElementById('recipeIngredients').innerHTML = recipe.ingredients; 
   } else {
     console.error("No recipes found.");
   }

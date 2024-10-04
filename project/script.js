@@ -30,27 +30,33 @@ submitButton.addEventListener('click', () => {
                 const image = recipe.recipe.image;
                 const uri = recipe.recipe.uri;
                 recipedetails += `
-                    <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow">
+                    <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow w-80 h-80 overflow-y-auto">
                         <div class="px-4 py-5 sm:px-6">
                             <h2 class="text-lg font-medium text-gray-900">${label}</h2>  
                         </div>
                         <div class="px-4 py-5 sm:p-6">
-                            <img src="${image}" alt="${label}">
+                            <img src="${image}" alt="${label}" class="rounded-lg border-2 border-gray-400 scale-75">
                         </div>
                         <div class="px-4 py-4 sm:px-6">
-                            <button onclick="viewRecipe('${uri}')">View Recipe</button>
+                            <button class="viewRecipe" data-uri="${uri}">View Recipe</button>
                         </div>`;
-            });
+            });            
             results.innerHTML = recipedetails;
+            const viewRecipeButtons = document.querySelectorAll('.viewRecipe');
+            viewRecipeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const uri = this.getAttribute('data-uri');
+                    viewRecipe(uri);
+                });
+            });
         })
         .catch((error) => {
             console.error("Error:", error);
-        });       
+        });
 });
-
 function viewRecipe(uri) {
     const id = uri.split("_")[1];
-    console.log(id);
     sessionStorage.setItem("id", id);
     window.location.href = "recipe.html";
-}
+};
+                
